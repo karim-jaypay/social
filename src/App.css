@@ -7,7 +7,12 @@
   background: white
 } */
 .bg-white {
-  background-color: #fbfbfb !important
+  background-color: #ffff !important
+}
+@media screen and (min-width: 1400px) {
+  .bg-white {
+    background-color: #fdfdfd !important
+  }
 }
 
 body {
@@ -36,7 +41,7 @@ h4 {
 p {
   color: #6e7176;
   font-weight: 300; 
-  font-size: 17px;
+  font-size: 18px;
   }
 .text {
   max-width: 500px;
@@ -186,9 +191,9 @@ footer {
   text-align: center;
 }
 .subtitle {
-  padding-top: 7rem;
+  padding-top: 5rem;
   font-weight: 100;
-  font-size: 25px;
+  font-size: 28px;
   margin-bottom: 2rem;
 }
 .icons {
@@ -330,6 +335,16 @@ ul li::before {
   height: 100%;
   width: 100%;
   max-height: 100%
+}
+
+
+@media screen and (min-width: 1881px ) {
+  .subtitle {
+    padding-top: 7rem;
+  }
+  h1 {
+    font-size: 65px !important;
+  }
 }
 
 
@@ -495,30 +510,76 @@ ul li::before {
   }
 }
 
-@media screen and (max-width: 500px) {
-  h1 {
-    font-size: 30px !important
-  }
-  .background {
-    margin-top: 7rem
-  }
-  .container-one {
-    width: 100%
-  }
-}
 
 @media screen and (max-width: 499px) {
 
   .text {
     margin-bottom: 1rem;
   }
-  .background {
-    margin-top: 12rem
-  }
   .container-one {
     top: 120px
   }
- 
+
+  h1 {
+    font-size: 25px !important
+  }
+  .background {
+    margin-top: 5rem
+  }
+  .container-one {
+    width: 65%
+  }
+  p {
+    width: 100%
+  }
+  .desc {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .background {
+    margin-top: 7rem
+  }
+ /*  .subtitle-div {
+    white-space: nowrap;
+    position: relative;
+  }
+  */
 
 }
 
+@media screen and (max-width: 399px ) {
+  .background {
+    margin-top: 9rem;
+  }
+  h1 {
+    position: relative;
+    right: 10%
+  }
+  .subtitle-div {
+    white-space: nowrap;
+    position: relative;
+    right: 13%
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .subtitle-div {
+    right: 0;
+    white-space: normal;
+  }
+  .background {
+    margin-top: 13rem
+  }
+  h1 {
+    position: relative;
+    right: 15%;
+  }
+}
+
+@media screen  and (max-width: 330px) {
+  h1 {
+    font-size: 23px !important
+  }
+  
+}

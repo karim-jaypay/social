@@ -24,14 +24,14 @@ export default function Header() {
                         </div>
                             <div  className="w-50 language">
                                 <div ref={ref} className="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setOpen(!open)}>
-                                    <img src={en} /> English
+                                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setOpen(!open)}>
+                                    <img src={en} alt="language" /> EN
                                 </button>
                                 {open &&
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item pt" href="/pt/social">Português</a></li>
-                                <li><a class="dropdown-item es" href="/es/social">Español</a></li>
-                                <li><a class="dropdown-item zh" href="/zh/social">简体中文</a></li>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a className="dropdown-item pt" href="/pt/social">Português</a></li>
+                                <li><a className="dropdown-item es" href="/es/social">Español</a></li>
+                                <li><a className="dropdown-item zh" href="/zh/social">简体中文</a></li>
                                 </ul>
                                 }
                                 </div>

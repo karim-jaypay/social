@@ -3,6 +3,7 @@ import React from 'react'
 import call from '../public/telephone.png'
 import mail from '../public/mail.png'
 import message from '../public/message.png'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -39,7 +40,7 @@ export default function Footer() {
                     <h4>The markets are waiting…</h4>
                    <p>Go ahead and register your Everest account. You’ll be up and running in minutes. What are you waiting for?
                    </p>
-                    <a href="" className="btn btn-blue">TRADE NOW</a>
+                    <Link to="#" className="btn btn-blue">TRADE NOW</Link>
                 </div>
                 <hr className="mb-5"/>
                 <div className="col-md-12 footer2">

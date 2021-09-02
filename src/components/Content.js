@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import Header from '../components/Header'
 
@@ -11,13 +11,9 @@ import Footer from '../components/Footer';
 import { ReactComponent as Bg }  from '../public/Wide.svg'
 import { ReactComponent as BgM } from '../public/bg.svg'
 
-import { useParams } from 'react-router-dom';
-
 export default function Content() {
 
-    const { social } = useParams()
-
-    console.log(social)
+    /* const { social } = useParams() */
     return (
         
         <div className="main-s">
@@ -30,14 +26,14 @@ export default function Content() {
            }
                 <div className="container-one text-center" style={{height:'55%'}}>
                     <div id="title-content" className="title-content h-100">
-                <div className="d-flex">
+                <div className="d-flex subtitle-div">
                     <div className="subtitle w-100">Follow Everest across your social channels</div>
                 </div>
                 <div className="d-flex">
-                    <h1 className="w-100">#TradeWith<span style={{color:'#23a5d6',fontWeight:'bolder'}}>Everest</span></h1>
+                    <h1 className="w-100">#TradeWith<span style={{color:'#23a5d6',fontWeight:'bolder'}}>EverestCM</span></h1>
                     
                 </div>
-                    <div>
+                    <div className="desc">
                     <p className="text">Latest market news, trading tutorials, videos, signals, and more across every popular social media platform!</p>
                     </div>
                     <button className="btn btn-black">FOLLOW US</button>
@@ -51,7 +47,7 @@ export default function Content() {
                 <div className="text-center whatyouget">What you get when you follow Everest on your social platforms</div>
 
                 <div>
-                <ImageSlider slides={SliderData} social={social} />
+                <ImageSlider slides={SliderData} />
                 </div>
 
             <Footer/>

@@ -9,7 +9,7 @@ import youtube from '../public/youtubew.png'
 
 import '../App.css'
 
-export default function ImageSlider({ slides, social }) {
+export default function ImageSlider({ slides }) {
 
     const [current, setCurrent] = useState(0)
     const [previous, setPrevious] = useState()
@@ -29,7 +29,7 @@ export default function ImageSlider({ slides, social }) {
 
     useEffect(() => {
         const elem = document.getElementById(document.querySelector('.slide.active').id+'d')
-        if(social && !mountRef.current) {
+      /*   if(social && !mountRef.current) {
             if(social === 'instagram') social = 0 
             else if(social === 'facebook') social = 1
             else if(social === 'twitter') social = 2
@@ -40,7 +40,8 @@ export default function ImageSlider({ slides, social }) {
             setCurrent(parseInt(social))
             setPrevious(elem1)
             mountRef.current = true
-        } else {
+        } else { */
+            
             if(mountRef.current) previous.classList.remove('active')
             mountRef.current = true
             
@@ -51,7 +52,7 @@ export default function ImageSlider({ slides, social }) {
                 
             }
 
-    }
+    //}
         
         
     }, [current])
@@ -108,8 +109,8 @@ export default function ImageSlider({ slides, social }) {
             return (
                 <div className={index === current ? 'slide active' : 'slide'} key={index} id={index}>
                 <ul >
-                    {index === current && slide.info.map((data) => {
-                        return <li>{data}</li>
+                    {index === current && slide.info.map((data, indexx) => {
+                        return <li key={indexx}>{data}</li>
                     })}
                 </ul>
                 <div className="ml-2 d-flex ">
