@@ -433,6 +433,7 @@ ul li::before {
     justify-content: center;
     align-items: center;
     position: absolute;
+    width: 100%
   }
   .slide {
     position: absolute;
