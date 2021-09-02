@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { SliderData } from './SliderData'
 
-import instagram from '../public/instagramw.png'
-import facebook from '../public/facebookw.png'
-import twitter from '../public/twitterw.png'
-import linkedin from '../public/linkedinw.png'
-import youtube from '../public/youtubew.png'
+import instagram from '../public/dots/instagram.svg'
+import facebook from '../public/dots/facebook.svg'
+import twitter from '../public/dots/twitter.svg'
+import linkedin from '../public/dots/linkedin.svg'
+import youtube from '../public/dots/youtube.svg'
 
 import '../App.css'
 

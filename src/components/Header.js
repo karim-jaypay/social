@@ -5,7 +5,7 @@ import '../App.css'
 
 import everest_logo from '../public/Everest_Logo.png'
 
-import en from '../public/en.png'
+import en from '../public/languages/en.png'
 
 export default function Header() {
 
@@ -29,9 +29,9 @@ export default function Header() {
                                 </button>
                                 {open &&
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a className="dropdown-item pt" href="/pt/social">Português</a></li>
-                                <li><a className="dropdown-item es" href="/es/social">Español</a></li>
-                                <li><a className="dropdown-item zh" href="/zh/social">简体中文</a></li>
+                                <li><a className="dropdown-item pt" href="/pt/social">PT</a></li>
+                                <li><a className="dropdown-item es" href="/es/social">ES</a></li>
+                                <li><a className="dropdown-item zh" href="/zh/social">CN</a></li>
                                 </ul>
                                 }
                                 </div>

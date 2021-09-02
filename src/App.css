@@ -15,6 +15,13 @@
   }
 }
 
+.dot > img {
+  margin-top: 2px
+}
+.dots > .dot:nth-child(1) > img {
+  margin-right: 1px
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -127,13 +134,13 @@ header .language {
       header .language ul li a:nth-child(even) {
         background-color: #00000026; }
       header .language ul li a.zh {
-        background: url("./public/zh.png") no-repeat center left; }
+        background: url("./public/languages/zh.png") no-repeat center left; }
       header .language ul li a.pt {
-        background: url("./public/pt-pt.png") no-repeat center left; }
+        background: url("./public/languages/pt-pt.png") no-repeat center left; }
       header .language ul li a.es {
-        background: url("./public/es.png") no-repeat center left; }
+        background: url("./public/languages/es.png") no-repeat center left; }
       header .language ul li a.en {
-        background: url("./public/en.png") no-repeat center left; }
+        background: url("./public/languages/en.png") no-repeat center left; }
   header .dropdown-menu {
     display: block;
     min-height: auto;

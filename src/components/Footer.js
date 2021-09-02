@@ -1,8 +1,8 @@
 import React from 'react'
 
-import call from '../public/telephone.png'
-import mail from '../public/mail.png'
-import message from '../public/message.png'
+import call from '../public/footer/telephone.png'
+import mail from '../public/footer/mail.png'
+import message from '../public/footer/message.png'
 import { Link } from 'react-router-dom'
 
 export default function Footer() {

@@ -1,8 +1,8 @@
-import instagramdot from '../public/instagram-logo.svg'
-import facebookdot from '../public/facebook.svg'
-import tiwtterdot from '../public/twitter.svg'
-import linkedindot from '../public/linkedin.svg'
-import youtubedot from '../public/youtube.svg'
+import instagramdot from '../public/socials/instagram-logo.svg'
+import facebookdot from '../public/socials/facebook.svg'
+import tiwtterdot from '../public/socials/twitter.svg'
+import linkedindot from '../public/socials/linkedin.svg'
+import youtubedot from '../public/socials/youtube.svg'
 
 export const SliderData = [
     {
