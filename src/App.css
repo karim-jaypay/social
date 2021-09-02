@@ -32,7 +32,7 @@ body {
 h1 {
   color: #171D24;
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1.5rem; }
 
 h2 {
@@ -100,7 +100,10 @@ p {
 
 /* HEADER */
 .header-logo {
-  width: 250px
+  height: 45px
+}
+header .main-header {
+  padding-top: 1rem;
 }
 header .main-header .column-section {
   min-height: 100px;
@@ -167,16 +170,16 @@ footer {
       color: #23A5D6;
       line-height: 26px; }
     footer .contact-column-1 .contacts_icon .text {
-      font-size: 16px; }
+      font-size: 16px; font-weight: 100;}
   footer .contact-column-2 p {
     padding-bottom: 40px; }
   footer .footer2 {
     padding-bottom: 60px; }
     footer .footer2 p {
       color: #909090;
-      font-size: 14px; }
+      font-size: 15px; }
   footer .copyright {
-    background: #23A5D6;
+    background: #86CCE8;
     min-height: 61px;
     display: flex;
     align-items: center;
@@ -185,7 +188,7 @@ footer {
       margin-bottom: 0; }
   footer .grey {
     color:grey; 
-    font-weight: bold
+    font-weight: 600
   }
 
   .ml-2 {

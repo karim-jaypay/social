@@ -30,7 +30,7 @@ export default function Content() {
                     <div className="subtitle w-100">Follow Everest across your social channels</div>
                 </div>
                 <div className="d-flex">
-                    <h1 className="w-100">#TradeWith<span style={{color:'#23a5d6',fontWeight:'bolder'}}>EverestCM</span></h1>
+                    <h1 className="w-100">#TradeWith<span style={{color:'#23a5d6',fontWeight:'bold'}}>EverestCM</span></h1>
                     
                 </div>
                     <div className="desc">

@@ -3,7 +3,7 @@ import { useClickAway } from "react-use";
 
 import '../App.css'
 
-import everest_logo from '../public/Everest_Logo.png'
+import everest_logo from '../public/EverestCM.svg'
 
 import en from '../public/languages/en.png'
 

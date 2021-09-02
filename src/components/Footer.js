@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="container">
             <div className="row ">
                 <div className="col-lg-7 contact-column-1">
-                    <h4>Get in touch</h4>
+                    <h4 style={{fontWeight:'lighter'}}>Get in touch</h4>
                     <p>Got a question? Our superstar support team is standing by.</p>
                     <div className="row contacts_icon">
 
@@ -37,7 +37,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="col-lg-5 contact-column-2">
-                    <h4>The markets are waiting…</h4>
+                    <h4 style={{fontWeight:'lighter'}}>The markets are waiting…</h4>
                    <p>Go ahead and register your Everest account. You’ll be up and running in minutes. What are you waiting for?
                    </p>
                     <Link to="#" className="btn btn-blue">TRADE NOW</Link>
@@ -45,14 +45,14 @@ export default function Footer() {
                 <hr className="mb-5"/>
                 <div className="col-md-12 footer2">
 
-                    <p>The Everest™ brand is owned and operated by Myrtle Ltd with registration number [ADD NUMBER].</p>
+                    <p>The EverestCM brand is owned and operated by Myrtle Ltd with registration number 179291 GBC Regulation:</p>
 
-                    <p><span className="grey">Regulation & Licensing:</span> Myrtle Ltd which is registered as a [ADD CONTENT HERE] and licensed by the Financial Securities Commission (FSC) under licence number [ADD LICENSE NUMBER].  The Company is headquartered at Suite 602, 6th Floor, Hennessy Tower, Pope Hennessy Street, Port Louis, Mauritius.
+                    <p><span className="grey">Regulation & Licensing Warning:</span> Myrtle Ltd is authorized and regulated by Mauritius Financial Services Commission (FSC) under the license number GB21026300.
 </p>
-                    <p><span className="grey">Risk Warning:</span> Forex and CFDs are leveraged financial instruments that carry a high degree of risk and may expose you to significant losses. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
+                    <p><span className="grey">Risk Warning:</span> CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Bearing this in mind, you should not invest more than you can afford to lose. Please read the full Risk Disclosure.
                     </p>
 
-                    <p><span className="grey">Regional Restrictions:</span> Everest does not provide its services to residents of the USA, Mauritius, South Africa, North Korea, Iran, Japan, Belgium, Canada, and other countries whose domestic regulations classify such investment offering as prohibited.
+                    <p><span className="grey">Regional Restrictions:</span> Everest does not provide its services to residents of the USA, Seychelles, Mauritius, North Korea, Iran, Japan, Belgium, Canada and other countries whose domestic regulations classify such investment offering as prohibited.
                     </p>
                 </div>
             </div>
@@ -60,7 +60,7 @@ export default function Footer() {
 
     </div>
     <div className="copyright text-center">
-        <p style={{color:'white'}}><span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> 2021 Everest™ </p>
+        <p style={{color:'black'}}><span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> 2021 Everest™ </p>
     </div>
 </footer>
 
