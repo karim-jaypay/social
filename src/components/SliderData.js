@@ -13,7 +13,8 @@ export const SliderData = [
         'Weekly top stock tips',
         'Interesting trading terms & definitions',
         'Trading educational series on IGTV'],
-        button: 'FOLLOW US ON IG'
+        button: 'FOLLOW US ON IG',
+        link: "https://www.instagram.com/tradeeverestcm/"
     },
     {
         image: facebookdot,
@@ -21,14 +22,16 @@ export const SliderData = [
         'Charts & pattern analysis - For beginners & intermediate traders', 
         'Trading Q&A show every Wednesday on FB Live', 
         'Interesting trading terms & definitions'],
-        button: 'FOLLOW US ON FB'
+        button: 'FOLLOW US ON FB',
+        link: "https://www.facebook.com/tradeeverestcm/"
     },
     {
         image: tiwtterdot,
         info: ['Latest trading charts on a hot instrument', 
         'Live market news in under 280 characters!', 
         'Info on the biggest upcoming trading events'],
-        button: 'FOLLOW US ON TW'
+        button: 'FOLLOW US ON TW',
+        link: "https://twitter.com/TradeEverestCM"
     },
     {
         image: linkedindot,
@@ -37,7 +40,8 @@ export const SliderData = [
         'Trading Q&A where we answer questions sent in to us by traders', 
         'Career opportunities at Everest',
         'Everest company news'],
-        button: 'FOLLOW US ON LI'
+        button: 'FOLLOW US ON LI',
+        link: "https://www.linkedin.com/company/tradeeverestcm/"
     },
     {
         image: youtubedot,
@@ -45,7 +49,8 @@ export const SliderData = [
         'How-To Guides on MT5 - From complete novice to pro video series',  
         'Bi-Monthly Conversation about the markets - A MUST SEE!', 
         'Altitude Podcast in video form'],
-        button: 'FOLLOW US ON YT'
+        button: 'FOLLOW US ON YT',
+        link: "https://www.youtube.com/channel/UCTy5MgqHX1On54WQHuLK4Lg"
     },
     
 ]
