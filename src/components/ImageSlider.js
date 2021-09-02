@@ -114,7 +114,7 @@ export default function ImageSlider({ slides }) {
                     })}
                 </ul>
                 <div className="ml-2 d-flex ">
-                <button className="btn btn-blue" onClick={slide.link}>{slide.button}</button>
+                <button className="btn btn-blue" onClick={ () => window.location.href=`${slide.link}`}>{slide.button}</button>
                 </div>
                 </div>
             )
