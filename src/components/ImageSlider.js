@@ -1,5 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { SliderData } from './SliderData'
+import React, { useState, useEffect, useCallback } from "react";
+
+import { useEmblaCarousel } from "embla-carousel/react";
+
+import { PrevButton, NextButton, DotButton } from "./EmblaCarouselButton";
+
+import '../App.css'
 
 import instagram from '../public/dots/instagram.svg'
 import facebook from '../public/dots/facebook.svg'
@@ -7,119 +12,110 @@ import twitter from '../public/dots/twitter.svg'
 import linkedin from '../public/dots/linkedin.svg'
 import youtube from '../public/dots/youtube.svg'
 
-import '../App.css'
+const EmblaCarousel = ({ slides }) => {
 
-export default function ImageSlider({ slides }) {
+  const [viewportRef, embla] = useEmblaCarousel({
+    skipSnaps: 'false',
+    loop: true
+    /* dragFree: true, */
+   /*  containScroll: "trimSnaps", */
+  });
+  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+  const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState([]);
 
-    const [current, setCurrent] = useState(0)
-    const [previous, setPrevious] = useState()
-
-    const mountRef = useRef(false);
-
-    const length = slides.length
-
-
-    const nextSlide = () => {
-        setCurrent(current === length -1 ? 0 : current + 1)
-    }
-    const prevSlide = () => {
-        setCurrent(current === 0 ? length -1 : current -1)
-    }
+  const images = [instagram, facebook, twitter, linkedin, youtube]
 
 
-    useEffect(() => {
-        const elem = document.getElementById(document.querySelector('.slide.active').id+'d')
-      /*   if(social && !mountRef.current) {
-            if(social === 'instagram') social = 0 
-            else if(social === 'facebook') social = 1
-            else if(social === 'twitter') social = 2
-            else if(social === 'linkedin') social = 3
-            else if(social === 'youtube') social = 4
-            const elem1 = document.getElementById(social + 'd')
-            elem1.classList.add('active')
-            setCurrent(parseInt(social))
-            setPrevious(elem1)
-            mountRef.current = true
-        } else { */
-            
-            if(mountRef.current) previous.classList.remove('active')
-            mountRef.current = true
-            
-            if(document.getElementsByClassName('.slide.active'))
-            {
-                elem.classList.add('active')
-                setPrevious(elem)
-                
-            }
+  const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
+  const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+  const scrollTo = useCallback((index) => embla && embla.scrollTo(index), [
+    embla
+  ]);
 
-    //}
-        
-        
-    }, [current])
-    
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+    setSelectedIndex(embla.selectedScrollSnap());
+    setPrevBtnEnabled(embla.canScrollPrev());
+    setNextBtnEnabled(embla.canScrollNext());
+  }, [embla, setSelectedIndex]);
 
-    const select = (id) => {
-            const elem = document.getElementById(id)
-            const slide_id = id.split('d')[0]
-            /*const slide = document.getElementById(slide_id) */
-    
-            if(elem.id !== previous.id) {
-                elem.classList.add('active')
-                previous.classList.remove('active')
-                setCurrent(parseInt(slide_id))
-                setPrevious(elem)
-            }
-    }
+  useEffect(() => {
+    if (!embla) return;
+    embla.on("select", onSelect);
+    setScrollSnaps(embla.scrollSnapList());
+    onSelect();
+  }, [embla, setScrollSnaps, onSelect]);
 
 
 
-    if(!Array.isArray(slides) || slides.length <=0) {
-        return null
-    }
-
-    return (
-    <div id="qwe" className="slider-div">
-        <div style={{display:'flex',flexDirection:'column', minWidth:'45%'}}>
-        <section className="slider">
-            <div className="left arrow" onClick={prevSlide}></div>
-            <div className="right arrow" onClick={nextSlide}></div>
-            
-          {SliderData.map((slide, index) => {
+  return (
+      <>
+      <div className="embla__div">
+          <div className="embla__content" >
+    <div className="embla">
+      <div className="embla__viewport" ref={viewportRef}>
+        <div className="embla__container">
+          {slides.map((slides,index) => {
               return (
-                  <div className={index === current ? 'slide active' : 'slide'} key={index} id={index}>
-                      {index === current && (
-                        <img src={slide.image} alt="icon" className="image"/>
-                      )}
-                    </div>
-              )
-          })} 
-          
-        </section>
-        <div className="dots">
-                    <div id="0d" className="dot" onClick={(e) => select(e.currentTarget.id)}><img src={instagram} alt="" /></div>
-                    <div id="1d"className="dot" onClick={(e) => select(e.currentTarget.id)}><img src={facebook} alt=""/></div>
-                    <div id="2d"className="dot" onClick={(e) => select(e.currentTarget.id)}><img src={twitter} alt=""/></div>
-                    <div id="3d"className="dot" onClick={(e) => select(e.currentTarget.id)}><img src={linkedin} alt=""/></div>
-                    <div id="4d"className="dot" onClick={(e) => select(e.currentTarget.id)}><img src={youtube} alt=""/></div>
-        </div>
-        </div>
-        
-
-        {SliderData.map((slide, index) => {
-            return (
-                <div className={index === current ? 'slide active' : 'slide'} key={index} id={index}>
-                <ul >
-                    {index === current && slide.info.map((data, indexx) => {
-                        return <li key={indexx}>{data}</li>
-                    })}
+            <div id={index} className="embla__slide" key={index}>
+              <div className="embla__slide__inner">
+                <div className="w-100">
+                <img src={slides.image} alt="icon" className="image"/>
+                </div>
+                
+                {/* list with logo on mobile slider*/}
+                <div className="embla__list">
+                <ul>
+                  {slides.info.map((data,indexx) => <li key={indexx}>{data}</li>)}
                 </ul>
-                <div className="ml-2 d-flex ">
-                <button className="btn btn-blue" onClick={ () => window.location.href=`${slide.link}`}>{slide.button}</button>
+                <div className="text-center" style={{marginLeft:'0.5rem'}}>
+                <a type="button" className="btn btn-blue" href={slides.link} target="_blank">{slides.button}</a>
+                <div className="shadow-link mt-1">{slides.shadow}</div>
                 </div>
                 </div>
-            )
-        })} 
-    
+              </div>
+            </div>
+              )}
+          )}
+        </div>
+       
+      </div>
+      <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+      <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
     </div>
-    )
-}
+    <div className="embla__dots">
+    {scrollSnaps.map((_, index) => (
+          <DotButton
+            key={index}
+            selected={index === selectedIndex}
+            onClick={() => scrollTo(index)}
+            image = {images[index]}
+          />
+        ))}
+
+    </div>
+        </div>
+
+            <div className="w-50">
+              {slides.map((item, index) => {
+            return (
+            <div key={index} className={`info ${index === selectedIndex && 'active'}`}>
+                <ul>
+                    {item.info.map((data, indexx) => <li key={indexx}>{data}</li>)}
+                </ul>
+                <div style={{marginLeft:'0.5rem'}}>
+                <a type="button" className="btn btn-blue" href={item.link} target="_blank">{item.button}</a>
+                <div className="shadow-link mt-1">{item.shadow}</div>
+                </div>
+            </div>
+            )
+                 })}
+            </div>
+</div>
+</>
+  );
+};
+
+export default EmblaCarousel;

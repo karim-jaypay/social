@@ -14,7 +14,8 @@ export const SliderData = [
         'Interesting trading terms & definitions',
         'Trading educational series on IGTV'],
         button: 'FOLLOW US ON IG',
-        link: "https://www.instagram.com/tradeeverestcm/"
+        link: "https://www.instagram.com/tradeeverestcm",
+        shadow: 'instagram.com/tradeeverestcm'
     },
     {
         image: facebookdot,
@@ -23,7 +24,8 @@ export const SliderData = [
         'Trading Q&A show every Wednesday on FB Live', 
         'Interesting trading terms & definitions'],
         button: 'FOLLOW US ON FB',
-        link: "https://www.facebook.com/tradeeverestcm/"
+        link: "https://www.facebook.com/tradeeverestcm",
+        shadow: 'facebook.com/tradeeverestcm'
     },
     {
         image: tiwtterdot,
@@ -31,7 +33,8 @@ export const SliderData = [
         'Live market news in under 280 characters!', 
         'Info on the biggest upcoming trading events'],
         button: 'FOLLOW US ON TW',
-        link: "https://twitter.com/TradeEverestCM"
+        link: "https://twitter.com/TradeEverestCM",
+        shadow: 'twitter.com/TradeEverestCM'
     },
     {
         image: linkedindot,
@@ -41,7 +44,8 @@ export const SliderData = [
         'Career opportunities at Everest',
         'Everest company news'],
         button: 'FOLLOW US ON LI',
-        link: "https://www.linkedin.com/company/tradeeverestcm/"
+        link: "https://www.linkedin.com/company/tradeeverestcm",
+        shadow: 'linkedin.com/tradeeverestcm'
     },
     {
         image: youtubedot,
@@ -50,7 +54,8 @@ export const SliderData = [
         'Bi-Monthly Conversation about the markets - A MUST SEE!', 
         'Altitude Podcast in video form'],
         button: 'FOLLOW US ON YT',
-        link: "https://www.youtube.com/channel/UCTy5MgqHX1On54WQHuLK4Lg"
+        link: "https://www.youtube.com/channel/UCTy5MgqHX1On54WQHuLK4Lg",
+        shadow: 'youtube.com/TradeEverestCM'
     },
     
 ]

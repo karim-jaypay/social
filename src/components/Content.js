@@ -4,7 +4,7 @@ import Header from '../components/Header'
 
 import '../App.css';
 
-import ImageSlider from '../components/ImageSlider';
+import EmblaCarousel from './ImageSlider';
 import { SliderData } from '../components/SliderData';
 import Footer from '../components/Footer';
 
@@ -13,7 +13,9 @@ import { ReactComponent as BgM } from '../public/bg.svg'
 
 export default function Content() {
 
-    /* const { social } = useParams() */
+   /*  const SLIDE_COUNT = 5;
+    const slides = Array.from(Array(SLIDE_COUNT).keys()); */
+
     return (
         
         <div className="main-s">
@@ -36,7 +38,7 @@ export default function Content() {
                     <div className="desc">
                     <p className="text">Latest market news, trading tutorials, videos, signals, and more across every popular social media platform!</p>
                     </div>
-                    <button className="btn btn-black">FOLLOW US</button>
+                    <a type="button" className="btn btn-black" href="#qwe">Tell Me More</a>
                     
                 </div>
                 </div>
@@ -44,10 +46,10 @@ export default function Content() {
             </div>
             <div className="bg-white">
 
-                <div className="text-center whatyouget">What you get when you follow Everest on your social platforms</div>
+                <div id="qwe" className="text-center whatyouget">What you get when you follow Everest on your social platforms</div>
 
                 <div>
-                <ImageSlider slides={SliderData} />
+                <EmblaCarousel slides={SliderData} />
                 </div>
 
             <Footer/>
