@@ -716,7 +716,10 @@ footer {
 @media screen and (max-width: 770px) {
   .embla__list > ul {
     list-style-type: decimal;
-    min-height: 209px
+    min-height: 209px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .embla__list > ul > li::marker {
     font-weight: bold;
@@ -764,16 +767,6 @@ footer {
     display: flex;
     flex-direction: column;
   }
-
-  .contact-column-1 {
-    text-align: center;
-  }
-  .contact-column-2 {
-    text-align: center;
-  }
-  .contacts_icon {
-    margin-bottom: 2rem;
-  }
 }
 
 @media screen and (max-width: 500px) {
@@ -788,6 +781,15 @@ footer {
   }
   .embla__div {
     margin-left: 12px
+  }
+  .contact-column-1 {
+    text-align: center;
+  }
+  .contact-column-2 {
+    text-align: center;
+  }
+  .contacts_icon {
+    margin-bottom: 2rem;
   }
 }
 
