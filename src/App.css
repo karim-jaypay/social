@@ -757,6 +757,9 @@ footer {
   .btn.btn-blue{
     font-size: 13px;
   }
+  .embla__list {
+    display: block !important;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -765,9 +768,6 @@ footer {
   }
   .embla__viewport {
     width: 100%
-  }
-  .embla__list {
-    display: block;
   }
   .embla__slide {
     min-width: 100%
