@@ -715,7 +715,6 @@ footer {
 
 @media screen and (max-width: 770px) {
   .embla__list > ul {
-    display: block;
     list-style-type: decimal;
     min-height: 209px
   }
@@ -759,6 +758,21 @@ footer {
   }
   .embla__list {
     display: block !important;
+  }
+  .list-center {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-column-1 {
+    text-align: center;
+  }
+  .contact-column-2 {
+    text-align: center;
+  }
+  .contacts_icon {
+    margin-bottom: 2rem;
   }
 }
 

@@ -67,11 +67,11 @@ const EmblaCarousel = ({ slides }) => {
                 
                 {/* list with logo on mobile slider*/}
                 <div className="embla__list">
-                <ul>
+                <ul className="list-center">
                   {slides.info.map((data,indexx) => <li key={indexx}>{data}</li>)}
                 </ul>
-                <div className="text-center" style={{marginLeft:'0.5rem'}}>
-                <a type="button" className="btn btn-blue" href={slides.link} target="_blank">{slides.button}</a>
+                <div className="text-center" style={{marginRight:'5px'}}>
+                <a  className="btn btn-blue" href={slides.link} target="_blank">{slides.button}</a>
                 <div className="shadow-link mt-1">{slides.shadow}</div>
                 </div>
                 </div>
@@ -106,7 +106,7 @@ const EmblaCarousel = ({ slides }) => {
                     {item.info.map((data, indexx) => <li key={indexx}>{data}</li>)}
                 </ul>
                 <div style={{marginLeft:'0.5rem'}}>
-                <a type="button" className="btn btn-blue" href={item.link} target="_blank">{item.button}</a>
+                <a className="btn btn-blue" href={item.link} target="_blank">{item.button}</a>
                 <div className="shadow-link mt-1">{item.shadow}</div>
                 </div>
             </div>

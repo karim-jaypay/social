@@ -38,7 +38,7 @@ export default function Content() {
                     <div className="desc">
                     <p className="text">Latest market news, trading tutorials, videos, signals, and more across every popular social media platform!</p>
                     </div>
-                    <a type="button" className="btn btn-black" href="#qwe">Tell Me More</a>
+                    <a className="btn btn-black" href="#qwe">Tell Me More</a>
                     
                 </div>
                 </div>
