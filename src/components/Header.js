@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react'
+import { useLocation } from 'react-router-dom';
 import { useClickAway } from "react-use";
 
 import '../App.css'
@@ -6,15 +7,25 @@ import '../App.css'
 import everest_logo from '../public/EverestCM.svg'
 
 import en from '../public/languages/en.png'
+import pt from '../public/languages/pt-pt.png'
+import es from '../public/languages/es.png'
+import zh from '../public/languages/zh.png'
 
 export default function Header() {
 
+    const location = useLocation()
+
     const [open, setOpen] = useState(false)
+    const languages = [
+        {id: 0, desktop:'English',mobile:'EN', img: en},
+        {id: 1, desktop:'Português',mobile:'PT', img: pt},
+        {id: 2, desktop:'Español',mobile:'ES', img: es},
+        {id: 3, desktop:'简体中文',mobile:'CN', img: zh}
+    ]
+    const [defaultLanguage, setDefaultLanguage] = useState(languages.filter(item => item.mobile.toLowerCase() === location.pathname.split('/')[1]).map((item) => item))
+    
 
-    const langD = ['English','Português','Español','简体中文']
-
-    const langM = ['EN','PT','ES','CN']
-
+    console.log(defaultLanguage)
     const ref = useRef()
 
     useClickAway(ref, () => setOpen(false));
@@ -29,13 +40,11 @@ export default function Header() {
                             <div  className="w-50 language">
                                 <div ref={ref} className="dropdown">
                                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setOpen(!open)}>
-                                    <img src={en} alt="language" /> {window.innerWidth > 800 ? langD[0] : langM[0]}
+                                    <img src={defaultLanguage[0].img} alt="language" /> {window.innerWidth > 800 ? defaultLanguage[0].desktop : defaultLanguage[0].mobile}
                                 </button>
                                 {open &&
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a className="dropdown-item pt" href="/pt/social">{window.innerWidth > 800 ? langD[1] : langM[1]}</a></li>
-                                <li><a className="dropdown-item es" href="/es/social">{window.innerWidth > 800 ? langD[2] : langM[2]}</a></li>
-                                <li><a className="dropdown-item zh" href="/zh/social">{window.innerWidth > 800 ? langD[3] : langM[3]}</a></li>
+                                    {languages.filter(item => item.id !== defaultLanguage[0].id).map((item,index) => <li key={item.id} onClick={() => setDefaultLanguage(item)}><a className={`dropdown-item ${item.mobile.toLowerCase()}`} href={`/${item.mobile.toLowerCase()}/social`}>{window.innerWidth > 800 ? item.desktop : item.mobile}</a></li>)}
                                 </ul>
                                 }
                                 </div>

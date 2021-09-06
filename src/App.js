@@ -13,7 +13,7 @@ function App() {
           <Route exact path="/en/social" component={Content} />
           <Route path="/es/social" component={Content} />
           <Route path="/pt/social" component={Content} />
-          <Route path="/zh/social" component={Content} />
+          <Route path="/cn/social" component={Content} />
           <Redirect to="en/social" />
       </Switch>
   </Router>

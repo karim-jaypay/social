@@ -131,7 +131,7 @@ header .language {
       padding: 0 10px 0 25px; }
       header .language ul li a:nth-child(even) {
         background-color: #00000026; }
-      header .language ul li a.zh {
+      header .language ul li a.cn {
         background: url("./public/languages/zh.png") no-repeat center left; }
       header .language ul li a.pt {
         background: url("./public/languages/pt-pt.png") no-repeat center left; }
