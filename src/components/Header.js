@@ -41,7 +41,7 @@ export default function Header() {
                                 </button>
                                 {open &&
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    {languages.filter(item => item.id !== defaultLanguage[0].id).map((item,index) => <li key={item.id} ><Link className={`dropdown-item ${item.mobile.toLowerCase()}`} to={`/${item.mobile.toLowerCase()}/social`} onClick={() => setDefaultLanguage([item])}>{window.innerWidth > 800 ? item.desktop : item.mobile}</Link></li>)}
+                                    {languages.filter(item => item.id !== defaultLanguage[0].id).map((item,index) => <li key={item.id}  onClick={() => window.location.reload(false)} ><Link className={`dropdown-item ${item.mobile.toLowerCase()}`} to={`/${item.mobile.toLowerCase()}/social`} onClick={() => setDefaultLanguage([item])}>{window.innerWidth > 800 ? item.desktop : item.mobile}</Link></li>)}
                                 </ul>
                                 }
                                 </div>
