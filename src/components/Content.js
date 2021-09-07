@@ -1,4 +1,5 @@
 import React from 'react'
+import smoothscroll from 'smoothscroll-polyfill';
 
 import Header from '../components/Header'
 
@@ -13,8 +14,15 @@ import { ReactComponent as BgM } from '../public/bg.svg'
 
 export default function Content() {
 
+    smoothscroll.polyfill();
+
    /*  const SLIDE_COUNT = 5;
     const slides = Array.from(Array(SLIDE_COUNT).keys()); */
+    const scroll = () => {
+
+        document.getElementById('qwe').scrollIntoView({ behavior: 'smooth' })
+    
+    }
 
     return (
         
@@ -38,7 +46,7 @@ export default function Content() {
                     <div className="desc">
                     <p className="text">Latest market news, trading tutorials, videos, signals, and more across every popular social media platform!</p>
                     </div>
-                    <a className="btn btn-black" href="#qwe">Tell Me More</a>
+                    <a className="btn btn-black" onClick={() => scroll()}>Tell Me More</a>
                     
                 </div>
                 </div>
