@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react'
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useClickAway } from "react-use";
 
 import '../App.css'
@@ -23,9 +23,6 @@ export default function Header() {
         {id: 3, desktop:'简体中文',mobile:'CN', img: zh}
     ]
     const [defaultLanguage, setDefaultLanguage] = useState(languages.filter(item => item.mobile.toLowerCase() === location.pathname.split('/')[1]).map((item) => item))
-    
-
-    console.log(defaultLanguage)
     const ref = useRef()
 
     useClickAway(ref, () => setOpen(false));
@@ -44,7 +41,7 @@ export default function Header() {
                                 </button>
                                 {open &&
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    {languages.filter(item => item.id !== defaultLanguage[0].id).map((item,index) => <li key={item.id} onClick={() => setDefaultLanguage(item)}><a className={`dropdown-item ${item.mobile.toLowerCase()}`} href={`/${item.mobile.toLowerCase()}/social`}>{window.innerWidth > 800 ? item.desktop : item.mobile}</a></li>)}
+                                    {languages.filter(item => item.id !== defaultLanguage[0].id).map((item,index) => <li key={item.id} ><Link className={`dropdown-item ${item.mobile.toLowerCase()}`} to={`/${item.mobile.toLowerCase()}/social`} onClick={() => setDefaultLanguage([item])}>{window.innerWidth > 800 ? item.desktop : item.mobile}</Link></li>)}
                                 </ul>
                                 }
                                 </div>
