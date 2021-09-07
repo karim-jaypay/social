@@ -5,6 +5,17 @@ import mail from '../public/footer/mail.png'
 import message from '../public/footer/message.png'
 
 export default function Footer() {
+
+
+    // FUNCTION TO OPEN ZENDESK HELP CENTER //
+    const click = () => {
+        const script = document.createElement("script");
+        script.async = true;
+        script.text = "zE('webWidget', 'toggle')"
+        document.body.appendChild(script);
+    }
+
+
     return (
         <footer className="footer">
     <div className="container-fluid">
@@ -30,7 +41,7 @@ export default function Footer() {
                         <div className="col-lg-4 col-md-4 text-center">
                             <img src={message} alt="Talk to us now via" />
                             <div className="title">Talk to us now via</div>
-                            <div className="text"><a className="text" href="#">Live Chat</a></div>
+                            <div className="text"><a className="text" href="#0" onClick={()=>click()}>Live Chat</a></div>
                         </div>
 
                     </div>
@@ -39,7 +50,7 @@ export default function Footer() {
                     <h4 style={{fontWeight:'lighter'}}>The markets are waiting…</h4>
                    <p>Go ahead and register your Everest account. You’ll be up and running in minutes. What are you waiting for?
                    </p>
-                    <a href="https://ascend-mu.everestcm.com/register" target="_blank" className="btn btn-blue">TRADE NOW</a>
+                    <a href="https://ascend-mu.everestcm.com/register" target="_blank" rel="noreferrer" className="btn btn-blue">TRADE NOW</a>
                 </div>
                 <hr className="mb-5"/>
                 <div className="col-md-12 footer2">
@@ -61,6 +72,7 @@ export default function Footer() {
     <div className="copyright text-center">
         <p style={{color:'black'}}><span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> 2021 Everest™ </p>
     </div>
+
 </footer>
 
     )

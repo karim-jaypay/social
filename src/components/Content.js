@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 
 import { ReactComponent as Bg }  from '../public/Wide.svg'
 import { ReactComponent as BgM } from '../public/bg.svg'
+import { Link } from 'react-router-dom';
 
 export default function Content() {
 
@@ -46,7 +47,7 @@ export default function Content() {
                     <div className="desc">
                     <p className="text">Latest market news, trading tutorials, videos, signals, and more across every popular social media platform!</p>
                     </div>
-                    <a className="btn btn-black" onClick={() => scroll()}>Tell Me More</a>
+                    <Link className="btn btn-black" to="#0" onClick={() => scroll()}>Tell Me More</Link>
                     
                 </div>
                 </div>

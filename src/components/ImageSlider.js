@@ -59,7 +59,7 @@ const EmblaCarousel = ({ slides }) => {
         <div className="embla__container">
           {slides.map((slides,index) => {
               return (
-            <div id={index} className="embla__slide" key={index}>
+            <div id={index+1} className="embla__slide" key={index+1}>
               <div className="embla__slide__inner">
                 <div className="w-100">
                 <img src={slides.image} alt="icon" className="image"/>
@@ -68,10 +68,10 @@ const EmblaCarousel = ({ slides }) => {
                 {/* list with logo on mobile slider*/}
                 <div className="embla__list">
                 <ul className="list-center">
-                  {slides.info.map((data,indexx) => <li key={indexx}>{data}</li>)}
+                  {slides.info.map((data,indexx) => <li key={indexx+1}>{data}</li>)}
                 </ul>
                 <div className="text-center" style={{marginRight:'5px'}}>
-                <a  className="btn btn-blue" href={slides.link} target="_blank">{slides.button}</a>
+                <a  className="btn btn-blue" href={slides.link} target="_blank" rel="noreferrer">{slides.button}</a>
                 <div className="shadow-link mt-1">{slides.shadow}</div>
                 </div>
                 </div>
@@ -88,7 +88,7 @@ const EmblaCarousel = ({ slides }) => {
     <div className="embla__dots">
     {scrollSnaps.map((_, index) => (
           <DotButton
-            key={index}
+            key={index+1}
             selected={index === selectedIndex}
             onClick={() => scrollTo(index)}
             image = {images[index]}
@@ -101,12 +101,12 @@ const EmblaCarousel = ({ slides }) => {
             <div className="w-50">
               {slides.map((item, index) => {
             return (
-            <div key={index} className={`info ${index === selectedIndex && 'active'}`}>
+            <div key={index+1} className={`info ${index === selectedIndex && 'active'}`}>
                 <ul>
                     {item.info.map((data, indexx) => <li key={indexx}>{data}</li>)}
                 </ul>
                 <div style={{marginLeft:'0.5rem'}}>
-                <a className="btn btn-blue" href={item.link} target="_blank">{item.button}</a>
+                <a className="btn btn-blue" href={item.link} target="_blank" rel="noreferrer">{item.button}</a>
                 <div className="shadow-link mt-1">{item.shadow}</div>
                 </div>
             </div>

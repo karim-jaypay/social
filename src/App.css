@@ -169,7 +169,7 @@ footer {
       color: #23A5D6;
       line-height: 26px; }
     footer .contact-column-1 .contacts_icon .text > a{
-      font-size: 16px; font-weight: 100; text-decoration: none; color:black}
+      font-size: 16px; font-weight: 100; text-decoration: none; color:black; cursor: pointer;}
       footer .contact-column-1 .contacts_icon .text:hover > a{
         color:#23A5D6
       }
